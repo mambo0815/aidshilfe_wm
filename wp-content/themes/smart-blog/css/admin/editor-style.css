@@ -1,0 +1,22 @@
+/**
+ * TinyMCE Admin Editor Styling 
+ */
+@import url(//fonts.googleapis.com/css?family=Merriweather:300italic);
+@import url('../../css/icons/css/icons.css');
+@import url('../../style.css');
+
+body {
+	margin: 30px;
+	max-width: 648px;
+	background: #fff;
+}
+
+.post-content {
+	font-size: 14px;
+}
+
+.wp-caption-dd {
+	font-size: inherit;
+	font-style: italic;
+	text-align: center;
+}

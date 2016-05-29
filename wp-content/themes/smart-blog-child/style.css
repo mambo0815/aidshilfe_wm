@@ -1,0 +1,52 @@
+/*
+ Theme Name: smart-blog Child
+ Theme URI:
+ Description: Theme Name Child Theme
+ Author: Marcus Paweletzki
+ Author URI: http://www.yourdomain.com/
+ Template: smart-blog
+ Version: 0.1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: smart-blog responsive Child Theme modded for Aidshilfe Westmünsterland e.V.
+*/
+/* This will import the stylesheet from the Theme Name parent theme */
+
+/*
+You can start adding your own styles here. Use !important to overwrite styles if needed. */
+
+.widget-title {
+	background-color: #d8027e;
+	color: #fff;
+}
+
+.title {
+	float: left;
+}
+
+.icon-search::before,
+.icon-hamburger::before {
+	color: #fff;
+}
+.icon-search:hover::before,
+.icon-hamburger:hover::before {
+	color: #000;
+}
+
+.slider {
+	color:#000;
+	max-height:500px;
+	display:block;
+	overflow-y:hidden;
+}
+.slick-prev   {
+	left:25px;
+	z-index:999;
+}
+.slick-next {
+	right:25px;
+	z-index:999;
+}
+.slick-slide img {
+	width:100%;
+}
