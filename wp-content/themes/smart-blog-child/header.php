@@ -35,43 +35,38 @@
 		
 			<div class="title">
 			
-				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-				
-				<?php if (Bunyad::options()->image_logo): // custom logo ?>
+					<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
 					
-					<?php Bunyad::get('helpers')->mobile_logo(); ?>
+					<?php if (Bunyad::options()->image_logo): // custom logo ?>
+						
+						<?php Bunyad::get('helpers')->mobile_logo(); ?>
+						
+						<img <?php
+							/**
+							 * Get escaped attributes and add optionally add srcset for retina
+							 */ 
+							Bunyad::markup()->attribs('image-logo', array(
+								'src'    => Bunyad::options()->image_logo,
+								'class'  => 'logo-image',
+								'alt'    => get_bloginfo('name', 'display'),
+								'srcset' => array(Bunyad::options()->image_logo => '', Bunyad::options()->image_logo_2x => '2x')
+							)); ?> />
+							 
+					<?php else: ?>
+						
+						<span class="text"><?php echo esc_html(get_bloginfo('name', 'display')); ?></span>
+						
+					<?php endif; ?>
 					
-					<img <?php
-						/**
-						 * Get escaped attributes and add optionally add srcset for retina
-						 */ 
-						Bunyad::markup()->attribs('image-logo', array(
-							'src'    => Bunyad::options()->image_logo,
-							'class'  => 'logo-image',
-							'alt'    => get_bloginfo('name', 'display'),
-							'srcset' => array(Bunyad::options()->image_logo => '', Bunyad::options()->image_logo_2x => '2x')
-						)); ?> />
-						 
-				<?php else: ?>
-					
-					<span class="text"><?php echo esc_html(get_bloginfo('name', 'display')); ?></span>
-					
-				<?php endif; ?>
-				
-				</a>
+					</a>
 			
-			</div>
+			</div><!-- /.title -->
 		
-		</div>
+		</div><!-- /.wrap -->
 		
 			
-			<!-- some piece of slider here... -->
-		<br clear="all" />
-			<div class="slider">
-				<div><img src="wp-content/uploads/2016/05/buehnenbild1.jpg" /></div>
-				<div>Text 2</div>
-				<div>Text 3</div>
-			</div>
+			
+			
 	</header> <!-- .main-head -->
 	
 	<?php else: ?>

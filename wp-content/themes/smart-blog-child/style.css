@@ -15,22 +15,33 @@
 /*
 You can start adding your own styles here. Use !important to overwrite styles if needed. */
 
-.widget-title {
-	background-color: #d8027e;
-	color: #fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e7ab29+0,ca8e2c+100;ahwm */
+
+
+.top-bar-content {
+	background: #e7ab29; /* Old browsers */
+	background: -moz-linear-gradient(top, #e7ab29 0%, #ca8e2c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #e7ab29 0%,#ca8e2c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #e7ab29 0%,#ca8e2c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ab29', endColorstr='#ca8e2c',GradientType=0 ); /* IE6-9 */
 }
 
 .title {
 	float: left;
+	margin-left: -20px;
 }
+
 
 .icon-search::before,
 .icon-hamburger::before {
-	color: #fff;
+	color: #787978;
 }
 .icon-search:hover::before,
 .icon-hamburger:hover::before {
-	color: #000;
+	color: #787978;
+}
+.navigation .menu > li li a:hover {
+ background-color: #787978;
 }
 
 .slider {
@@ -38,6 +49,7 @@ You can start adding your own styles here. Use !important to overwrite styles if
 	max-height:500px;
 	display:block;
 	overflow-y:hidden;
+	clear: both;
 }
 .slick-prev   {
 	left:25px;
@@ -49,4 +61,8 @@ You can start adding your own styles here. Use !important to overwrite styles if
 }
 .slick-slide img {
 	width:100%;
+}
+
+ .message {
+	font-size: 14px !important;
 }
